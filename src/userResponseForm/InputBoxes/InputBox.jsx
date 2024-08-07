@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../home.css';
+import { Tooltip } from 'react-tooltip';
+import { ReactComponent as Info_svg } from "../../assests/svgs/info.svg"
 
 const InputBox = ({ type, heading, errorText = "Only valid input is allowed", value, setValue }) => {
     const [error, setError] = useState(false);
@@ -39,10 +41,16 @@ const InputBox = ({ type, heading, errorText = "Only valid input is allowed", va
                     onChange={handleChange}
                     placeholder={type === 'numeric' ? 'Enter a number' : type === 'date' ? 'YYYY-MM-DD' : 'Enter text'}
                 />
+                <div data-tooltip-id="info-tooltip" className='infoIcon'>
+                    <Info_svg />
+                </div>
                 {error && <p className='errorText'>
                     {errorText}
                 </p>}
             </div>
+            <Tooltip id="info-tooltip"
+                place='top'
+                content='Testing tooltip' />
         </div>
     );
 };
