@@ -10,7 +10,7 @@ function App() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'flex-start',
-      alignSelf: 'center'
+      fontFamily: 'Roboto, sans-serif'
     }}>
       <BrowserRouter>
         <Routes>
@@ -19,7 +19,7 @@ function App() {
           <Route path="/error" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </div >
   );
 }
 
