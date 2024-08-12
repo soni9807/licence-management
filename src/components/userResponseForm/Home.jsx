@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import InputBox from "./InputBoxes/InputBox";
 import PrimaryButton from "./Buttons/PrimaryButton";
 import './home.css'
-import postUserResponseData from "../APIs/postUserResponseData";
-import { inputFields } from "../util/inputfields";
+import { inputFields } from "../../util/inputfields";
+import postUserResponseData from "../../APIs/postUserResponseData";
+import Heading from "../../components/typography/Heading";
+import withAuth from "../../auth/withAuth";
 
 const Home = () => {
     const [userData, setUserData] = useState(inputFields);
@@ -35,15 +37,16 @@ const Home = () => {
     };
 
     return (
-        <div className="homeHeroSection">
-            <p className="heading">User response form</p>
+        <div className="homeHeroSectionm my-12 bg-gray-100 rounded-lg">
+            <Heading heading="User response form" variant="large" customStyles="text-center my-5" />
             <div className="inputfieldsDiv">
-                {userData.map(({ label, type, value, options }, index) => {
+                {userData.map(({ label, type, value, options, info }, index) => {
                     return type === "multi" ? (
                         <DropdownMenu
                             key={label}
                             heading={label}
                             options={options}
+                            tooltip={info}
                             selectedOption={userData[index].selectedOption || ""}
                             setSelectedOption={(value) => handleDropdownChange(index, value)}
                         />
@@ -53,6 +56,7 @@ const Home = () => {
                             heading={label}
                             type={type}
                             value={value}
+                            tooltip={info}
                             setValue={(text) => handleInputChange(index, text)}
                         />
                     );
@@ -63,4 +67,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default withAuth(Home);

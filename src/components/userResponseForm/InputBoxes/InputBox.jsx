@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import '../home.css';
 import { Tooltip } from 'react-tooltip';
-import { ReactComponent as Info_svg } from "../../assests/svgs/info.svg"
+import { ReactComponent as Info_svg } from "../../../assests/svgs/info.svg"
 
-const InputBox = ({ type, heading, errorText = "Only valid input is allowed", value, setValue }) => {
+const InputBox = ({ type, heading, errorText = "Only valid input is allowed", value, setValue, tooltip }) => {
     const [error, setError] = useState(false);
 
     const handleChange = (e) => {
@@ -35,22 +35,22 @@ const InputBox = ({ type, heading, errorText = "Only valid input is allowed", va
             <p className='inputHeading'>{heading}: </p>
             <div className='inputdiv'>
                 <input
-                    className='inputBox'
+                    className={`text-sm border-2 border-gray-600 py-1 px-2 rounded-md ${!tooltip ? 'w-[90%]' : 'w-full'}`}
                     type={type === 'date' ? 'date' : 'text'}
                     value={value}
                     onChange={handleChange}
                     placeholder={type === 'numeric' ? 'Enter a number' : type === 'date' ? 'YYYY-MM-DD' : 'Enter text'}
                 />
-                <div data-tooltip-id="info-tooltip" className='infoIcon'>
+                {tooltip && <div data-tooltip-id="info-tooltip" className='infoIcon'>
                     <Info_svg />
-                </div>
+                </div>}
                 {error && <p className='errorText'>
                     {errorText}
                 </p>}
             </div>
-            <Tooltip id="info-tooltip"
+            {tooltip && <Tooltip id="info-tooltip"
                 place='top'
-                content='Testing tooltip' />
+                content={tooltip} />}
         </div>
     );
 };

@@ -1,8 +1,9 @@
 import React from "react";
-import Home from "./userResponseForm/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PrivateRoute from "./auth/PrivateRoute";
-import ErrorPage from "./GlobalComponents/ErrorPage";
+import ErrorPage from "./components/ErrorPage";
+import Login from "./components/screens/LoginPage";
+import CaptureToken from "./components/CaptureToken";
+import Home from "./components/userResponseForm/Home";
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
     }}>
       <BrowserRouter>
         <Routes>
-          {/* <PrivateRoute path="/form" element={<PrivateRoute Component={<Home />} />} /> */}
+          <Route path="/" element={<Login />} />
           <Route path="/form" element={<Home />} />
+          <Route path="/auth/callback" element={<CaptureToken />} />
           <Route path="/error" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

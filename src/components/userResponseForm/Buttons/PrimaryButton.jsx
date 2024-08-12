@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../home.css';
-import Loader from "../Loader";
+import Loader from "../../loader/Loader";
 
 const PrimaryButton = ({ buttonText, onPress, disabled, loading }) => {
 
