@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../home.css';
+
 
 import { ReactComponent as Info_svg } from "../../../assests/svgs/info.svg"
 import { Tooltip } from 'react-tooltip';
@@ -19,11 +19,11 @@ const DropdownMenu = ({ heading, options, selectedOption, setSelectedOption, too
     };
 
     return (
-        <div className='textInputBox'>
-            <p className='inputHeading'>{heading}:</p>
-            <div className='inputdiv'>
+        <div className='flex justify-start items-center space-x-1 w-fit'>
+            <p className='text-xs font-bold w-[10vw]'>{heading}:</p>
+            <div className='flex justify-center items-center'>
                 <select
-                    className={`text-sm border-2 border-gray-600 py-1 px-2 rounded-md ${!tooltip ? 'w-[90%]' : 'w-full'} ${error ? 'border-red-600' : ''}`}
+                    className={`text-xs border border-gray-200 py-1 px-2 rounded-md w-[15vw]  ${error ? 'border-red-600' : ''}`}
                     id="dropdown"
                     name="dropdown"
                     value={selectedOption}

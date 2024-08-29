@@ -18,8 +18,7 @@ const CheckBox = ({ label, required, errorText = "This checkbox is required", ch
     };
 
     return (
-        <div className='textInputBox'>
-
+        <div className='flex justify-start items-center space-x-1'>
             <div className='checkboxDiv'>
                 <input
                     type="checkbox"

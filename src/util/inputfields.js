@@ -3,7 +3,9 @@ export const inputFields = [
         "label": "Jira Ticket",
         "value": "",
         "type": "text",
-        "info": false
+        "info": false,
+        "errorText": "Please enter Jira Ticket or Comments",
+        "placeholder": "https://securonix.atlassian..."
     },
     {
         "label": "Cluster",

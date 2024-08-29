@@ -1,0 +1,6 @@
+{
+    "VM_OPERATIONS_URL": "http://172.20.13.59:5004",
+    "VM_OPERATIONS_URL_DOWNLOAD": "http://172.20.13.59:5004",
+    "SNYPR_OMC_API": "http://172.20.13.59:8000",
+    "SNYPR_OMC_LOGGING": "http://172.20.13.59:8005"
+}
