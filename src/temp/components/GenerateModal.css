@@ -1,7 +1,6 @@
 .small-input {
-  width: 345px;
-  /* Adjust the width as needed */
-}
+    width: 345px; /* Adjust the width as needed */
+  }
 
 .bottom-right-button {
   margin-left: "auto";
@@ -10,8 +9,7 @@
 /* Custom styling for the dropdown arrow */
 .custom-select {
   position: relative;
-  width: 150px;
-  /* Adjust width as needed */
+  width: 150px; /* Adjust width as needed */
   /* appearance: none; */
   /* -webkit-appearance: none; */
   /* -moz-appearance: none; */
@@ -23,8 +21,7 @@
 
 /* Styling for the arrow */
 .custom-select::after {
-  content: '\25BC';
-  /* Unicode character for a down arrow */
+  content: '\25BC'; /* Unicode character for a down arrow */
   position: absolute;
   top: 50%;
   right: 10px;
@@ -36,19 +33,14 @@
 /* Add this CSS to your stylesheet or component */
 .custom-table {
   background-image: url('./w127.jpg');
-  width: 100%;
-  border-collapse: collapse;
-  /* Remove default spacing between table cells */
+  width: 100%; 
+  border-collapse: collapse; /* Remove default spacing between table cells */
 }
 
-.custom-th,
-.custom-td {
-  border: 1px solid #ddd;
-  /* Add borders to cells for better visibility */
-  padding: 8px;
-  /* Add padding to cells for spacing */
-  text-align: left;
-  /* Align text to the left */
+.custom-th, .custom-td {
+  border: 1px solid #ddd; /* Add borders to cells for better visibility */
+  padding: 8px; /* Add padding to cells for spacing */
+  text-align: left; /* Align text to the left */
 }
 
 .custom-th {
@@ -59,13 +51,11 @@
 }
 
 /* Set specific widths for the first and second columns */
-.custom-th:first-child,
-.custom-td:first-child {
+.custom-th:first-child, .custom-td:first-child {
   width: 50px;
 }
 
-.custom-th:nth-child(2),
-.custom-td:nth-child(2) {
+.custom-th:nth-child(2), .custom-td:nth-child(2) {
   width: 65%;
 }
 
@@ -81,40 +71,40 @@
   padding: 1em;
   border: 1px solid #ccc;
   /* border: 3px solid #1F3651; */
-}
-
-.myForm * {
+  }
+  
+  .myForm * {
   box-sizing: border-box;
-}
-
-.myForm fieldset {
+  }
+  
+  .myForm fieldset {
   border: none;
   padding: 0;
-}
-
-.myForm legend,
-.myForm label {
+  }
+  
+  .myForm legend,
+  .myForm label {
   padding: 0;
   font-weight: bold;
-}
-
-.myForm label.choice {
+  }
+  
+  .myForm label.choice {
   font-size: 0.9em;
   font-weight: normal;
-}
-
-.myForm label {
+  }
+  
+  .myForm label {
   text-align: left;
   display: block;
-}
-
-.myForm input[type="text"],
-.myForm input[type="tel"],
-.myForm input[type="email"],
-.myForm input[type="date"],
-.myForm input[type="datetime-local"],
-.myForm select,
-.myForm textarea {
+  }
+  
+  .myForm input[type="text"],
+  .myForm input[type="tel"],
+  .myForm input[type="email"],
+  .myForm input[type="date"],
+  .myForm input[type="datetime-local"],
+  .myForm select,
+  .myForm textarea {
   float: right;
   width: 60%;
   border: 1px solid #ccc;
@@ -122,18 +112,18 @@
   /* font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; */
   font-size: 0.9em;
   padding: 0.3em;
-}
-
-.myForm textarea {
+  }
+  
+  .myForm textarea {
   height: 100px;
-}
-
-.myForm input[type="radio"],
-.myForm input[type="checkbox"] {
+  }
+  
+  .myForm input[type="radio"],
+  .myForm input[type="checkbox"] {
   margin-left: 40%;
-}
-
-.myForm button {
+  }
+  
+  .myForm button {
   padding: 1em;
   border-radius: 0.5em;
   background: #eee;
@@ -141,95 +131,81 @@
   font-weight: bold;
   margin-left: 40%;
   margin-top: 1.8em;
-}
-
-.myForm button:hover {
+  }
+  
+  .myForm button:hover {
   background: #ccc;
   cursor: pointer;
-}
+  }
 
-/* .forms-container { */
-/* display: grid; */
-/* grid-template-columns: 1fr 1fr 1fr; Two columns for the forms */
-/* gap: 10px; */
-/* } */
+  /* .forms-container { */
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; Two columns for the forms */
+  /* gap: 10px; */
+  /* } */
 
-.vertical-gap {
-  margin-top: 10px;
-  /* Adjust the vertical gap between forms */
-}
+  .vertical-gap {
+    margin-top: 10px; /* Adjust the vertical gap between forms */
+  }
 
-.custom_confirm-table {
-  width: 100%;
-  /* Set overall table width */
-  /* border: 1px solid; */
-  border-collapse: collapse;
-  /* Remove default spacing between table cells */
-  /* border: 3px solid #1F3651; */
-}
+  .custom_confirm-table {
+    width: 100%; /* Set overall table width */
+    /* border: 1px solid; */
+    border-collapse: collapse; /* Remove default spacing between table cells */
+    /* border: 3px solid #1F3651; */
+  }
+  .custom_confirm-th, .custom_confirm-td {
+    border: 1px solid #ddd; /* Add borders to cells for better visibility */
+    padding: 8px; /* Add padding to cells for spacing */
+    text-align: left; /* Align text to the left */
+  }
 
-.custom_confirm-th,
-.custom_confirm-td {
-  border: 1px solid #ddd;
-  /* Add borders to cells for better visibility */
-  padding: 8px;
-  /* Add padding to cells for spacing */
-  text-align: left;
-  /* Align text to the left */
-}
-
-.custom_confirm-th {
-  background-color: #F5F5F5;
-  color: black;
-  font-size: medium;
-}
+  .custom_confirm-th {
+    background-color: #F5F5F5;
+    color: black;
+    font-size: medium;
+  }
 
 .myForm_confirm legend,
 .myForm_confirm label {
-  padding: 0;
-  font-weight: bold;
+    padding: 0;
+    font-weight: bold;
 }
 
 .myForm_confirm label {
-  text-align: left;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.5em;
+    text-align: left;
+    display: flex;
+    align-items: center; 
+    margin-bottom: 0.5em; 
 }
 
 .myForm_confirm label input[type="text"],
 .myForm_confirm label textarea {
-  width: 60%;
-  margin-left: 1em;
-  /* Adjust spacing between label and input */
-  border: 1px solid #ccc;
-  font-size: 0.9em;
-  padding: 0.3em;
-  box-sizing: border-box;
+    width: 60%;
+    margin-left: 1em; /* Adjust spacing between label and input */
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+    padding: 0.3em;
+    box-sizing: border-box; 
 }
 
 .background-image {
+  /* background-image: url('/Users/ashwin/Downloads/w118.jpg'); */
   background-image: url('./w99.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 90%;
-  height: 100%;
-  overflow: auto;
+  width:"10px"; height:"10px";
 }
-
 
 .form-group {
   display: flex;
   align-items: center;
-  gap: 91px;
+  gap: 91px; 
 }
 
 .form-group label {
   padding: 0;
   font-weight: bold;
   white-space: nowrap;
-}
+  }
 
 .input-container {
   display: flex;
@@ -239,7 +215,7 @@
 
 .unit {
   font-size: 13px;
-  margin-left: 5px;
+  margin-left: 5px; 
 }
 
 .circular-input {
@@ -253,8 +229,7 @@
 }
 
 .circular-input:focus {
-  border-color: #007BFF !important;
-  /* Change the border color when the input is focused */
+  border-color: #007BFF !important; /* Change the border color when the input is focused */
 }
 
 .myForm input:hover {
@@ -263,7 +238,7 @@
 }
 
 .myForm select:hover {
-  border-color: #333333 !important;
+  border-color: #333333 !important; 
   box-shadow: 0 0 8px rgba(51, 51, 51, 0.5);
 }
 
@@ -285,21 +260,17 @@
 }
 
 .loading {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
   border-radius: 50%;
   width: 40px;
   height: 40px;
   animation: spin 2s linear infinite;
+  margin: 20px auto;
   align-content: center;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

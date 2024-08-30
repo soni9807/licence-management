@@ -6,9 +6,8 @@ import CaptureToken from "./components/CaptureToken";
 import RefreshModal from "./temp/components/RefreshModal";
 import DisableModal from "./temp/components/DisableModal";
 import GenerateModalAudit from "./temp/components/GenerateModalAudit";
-import GenerateModal from "./temp/components/GenerateModalcopy";
+import GenerateModal from "./temp/components/GenerateModal";
 import LicenceManagment from "./components/screens/LicensceManagment";
-import GenerateLincence from "./components/screens/GenerateLincence";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/generate-licence" element={<GenerateLincence />} />
           <Route path="/licence-management" element={<LicenceManagment />} />
           <Route path="/generate-modal" element={<GenerateModal />} />
           <Route path="/refresh-licence" element={<RefreshModal />} />

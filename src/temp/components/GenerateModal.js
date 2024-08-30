@@ -195,7 +195,7 @@ const GenerateModal = ({
             let temp_valuesArray = valuesArray.filter((value) => value !== selectedValue)
             const newArray = [selectedValue, ...temp_valuesArray]
             temp_data[selected_plan][category][featureName] = newArray
-          } catch { }
+          } catch {}
         })
       })
       setData(temp_data)
@@ -1315,17 +1315,17 @@ const GenerateModal = ({
                                                     (disable_plan_config[plan] &&
                                                       disable_plan_config[plan][subcategory] &&
                                                       disable_plan_config[plan][subcategory][
-                                                      subsubcategory
+                                                        subsubcategory
                                                       ] === 'disable')
                                                   }
                                                   style={{
                                                     color: 'black',
                                                     backgroundColor:
                                                       disable_plan_config[plan] &&
-                                                        disable_plan_config[plan][subcategory] &&
-                                                        disable_plan_config[plan][subcategory][
+                                                      disable_plan_config[plan][subcategory] &&
+                                                      disable_plan_config[plan][subcategory][
                                                         subsubcategory
-                                                        ] === 'disable'
+                                                      ] === 'disable'
                                                         ? 'lightgray'
                                                         : 'white',
                                                   }}

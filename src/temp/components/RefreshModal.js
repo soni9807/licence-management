@@ -163,7 +163,7 @@ const RefreshModal = ({
   }
 
   return (
-    <CModal scrollable visible={true} size="xl" onClose={onClose1}>
+    <CModal scrollable visible={isOpen} size="xl" onClose={onClose1}>
       <CAlert
         color={alertProps['color']}
         dismissible

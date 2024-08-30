@@ -277,3 +277,105 @@ export const config_gb_per_day = [
 ]
 
 export const disable_plan_config = {}
+
+// export const disable_plan_config = {
+//   basic: {
+//     'Ingestion, Storage and Enrichment': {
+//       'Data enrichment: Threat Intelligence, Geolocation, Identity': 'disable',
+//     },
+//     'Search Capacity': {
+//       'Monthly search capacity included with the package': 'disable',
+//     },
+//     'Platform Add-ons': {
+//       'Investigate: Integrate internal and external data in investigation process': 'disable',
+//       'ATS: Autonomous Threat Sweeper Service - threat assessment and response': 'disable',
+//       'Content / Data Science Studio (Premium playbooks and usage are metered)': 'disable',
+//       'Threat Coverage Analyzer: Security posture assessment': 'disable',
+//       'NxLog Windows data collection': 'disable',
+//       'Premium Disaster Recovery: Improved recovery and availability SLAs': 'disable',
+//       'Data Services (Hydration, handover)': 'disable',
+//       'Additional Hot or Cold storage': 'disable',
+//       'Hosted (Cloud) Collectors': 'disable',
+//     },
+//   },
+
+//   standard: {
+//     'Ingestion, Storage and Enrichment': {
+//       'Data enrichment: Threat Intelligence, Geolocation, Identity': 'disable',
+//     },
+//     'Search Capacity': {
+//       'Monthly search capacity included with the package': 'disable',
+//     },
+//     'Platform Add-ons': {
+//       'Investigate: Integrate internal and external data in investigation process': 'disable',
+//       'ATS: Autonomous Threat Sweeper Service - threat assessment and response': 'disable',
+//       'Content / Data Science Studio (Premium playbooks and usage are metered)': 'disable',
+//       'Threat Coverage Analyzer: Security posture assessment': 'disable',
+//       'NxLog Windows data collection': 'disable',
+//       'Premium Disaster Recovery: Improved recovery and availability SLAs': 'disable',
+//       'Data Services (Hydration, handover)': 'disable',
+//       'Additional Hot or Cold storage': 'disable',
+//       'Hosted (Cloud) Collectors': 'disable',
+//     },
+//   },
+
+//   advanced: {
+//     'Ingestion, Storage and Enrichment': {
+//       'Data enrichment: Threat Intelligence, Geolocation, Identity': 'disable',
+//     },
+//     'Search Capacity': {
+//       'Monthly search capacity included with the package': 'disable',
+//     },
+//     'Platform Add-ons': {
+//       'Investigate: Integrate internal and external data in investigation process': 'disable',
+//       'ATS: Autonomous Threat Sweeper Service - threat assessment and response': 'disable',
+//       'Content / Data Science Studio (Premium playbooks and usage are metered)': 'disable',
+//       'Threat Coverage Analyzer: Security posture assessment': 'disable',
+//       'NxLog Windows data collection': 'disable',
+//       'Premium Disaster Recovery: Improved recovery and availability SLAs': 'disable',
+//       'Data Services (Hydration, handover)': 'disable',
+//       'Additional Hot or Cold storage': 'disable',
+//       'Hosted (Cloud) Collectors': 'disable',
+//     },
+//   },
+
+//   ela: {
+//     'Ingestion, Storage and Enrichment': {
+//       'Data enrichment: Threat Intelligence, Geolocation, Identity': 'disable',
+//     },
+//     'Search Capacity': {
+//       'Monthly search capacity included with the package': 'disable',
+//     },
+//     'Platform Add-ons': {
+//       'Investigate: Integrate internal and external data in investigation process': 'disable',
+//       'ATS: Autonomous Threat Sweeper Service - threat assessment and response': 'disable',
+//       'Content / Data Science Studio (Premium playbooks and usage are metered)': 'disable',
+//       'Threat Coverage Analyzer: Security posture assessment': 'disable',
+//       'NxLog Windows data collection': 'disable',
+//       'Premium Disaster Recovery: Improved recovery and availability SLAs': 'disable',
+//       'Data Services (Hydration, handover)': 'disable',
+//       'Additional Hot or Cold storage': 'disable',
+//       'Hosted (Cloud) Collectors': 'disable',
+//     },
+//   },
+
+//   ueba_only: {
+//     'Ingestion, Storage and Enrichment': {
+//       'Data enrichment: Threat Intelligence, Geolocation, Identity': 'disable',
+//     },
+//     'Search Capacity': {
+//       'Monthly search capacity included with the package': 'disable',
+//     },
+//     'Platform Add-ons': {
+//       'Investigate: Integrate internal and external data in investigation process': 'disable',
+//       'ATS: Autonomous Threat Sweeper Service - threat assessment and response': 'disable',
+//       'Content / Data Science Studio (Premium playbooks and usage are metered)': 'disable',
+//       'Threat Coverage Analyzer: Security posture assessment': 'disable',
+//       'NxLog Windows data collection': 'disable',
+//       'Premium Disaster Recovery: Improved recovery and availability SLAs': 'disable',
+//       'Data Services (Hydration, handover)': 'disable',
+//       'Additional Hot or Cold storage': 'disable',
+//       'Hosted (Cloud) Collectors': 'disable',
+//     },
+//   },
+// }
