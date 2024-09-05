@@ -272,7 +272,7 @@ const Tenants_licensing_audit = () => {
           {item.alertMessage}
         </CAlert>
       ))}
-      <CRow>
+      <CRow className="text-xs ">
         <CCol s={2}>
           <CWidgetStatsF
             className="mb-3"
@@ -363,15 +363,17 @@ const Tenants_licensing_audit = () => {
         </CCol>
       </CRow>
       <CRow>
-        <CContainer style={{ overflow: "auto" }}>
+        <CContainer
+          style={{ overflow: "auto", fontSize: "12px", marginBottom: "24px" }}
+        >
           <FilteredSmartTable
             items={tenantList}
             noItemsLabel=""
-            columnFilter
+            // columnFilter
             setSelectedItems={setSelectedTenants}
             selected={selectedTenants}
             setSelectedItemCount={setSelectedTenantCount}
-            columnSorter
+            // columnSorter
             pagination
             loading={showSpinner}
             selectable

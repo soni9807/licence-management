@@ -7,6 +7,7 @@ const Footer = () => {
           href="https://securonix.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="underline text-blue-700"
         >
           Securonix
         </a>
@@ -18,6 +19,7 @@ const Footer = () => {
           href="https://securonix.com"
           target="_blank"
           rel="noopener noreferrer"
+          className="underline text-blue-700"
         >
           Snypr Operations Management Console &amp; Cloud Service Engineering -
           Team Devops
