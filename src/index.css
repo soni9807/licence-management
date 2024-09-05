@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --base-font-size: 5px;
+}
+
+h1 {
+    font-size: var(--base-font-size);
+}

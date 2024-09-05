@@ -8,6 +8,8 @@ import DisableModal from "./temp/components/DisableModal";
 import GenerateModalAudit from "./temp/components/GenerateModalAudit";
 import GenerateModal from "./temp/components/GenerateModal";
 import LicenceManagment from "./components/screens/LicensceManagment";
+import "@coreui/coreui/dist/css/coreui.min.css";
+import "@coreui/coreui-pro/dist/css/coreui.min.css";
 
 function App() {
   return (

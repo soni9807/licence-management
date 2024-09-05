@@ -30,6 +30,7 @@ import GenerateModalAudit from "../temp/components/GenerateModalAudit";
 import DisableModal from "../temp/components/DisableModal";
 import RefreshModal from "../temp/components/RefreshModal";
 import FilteredSmartTable from "./components/FilteredSmartTable";
+import Caption from "../components/Atoms/typography/Caption";
 
 const Tenants = () => {
   var config = require("../util/config.json");
@@ -555,11 +556,6 @@ const Tenants = () => {
       color: "info",
     },
     {
-      title: "Total EPS",
-      value: statsLoaded ? epsCount : "Loading...",
-      color: "success",
-    },
-    {
       title: "Basic",
       value: statsLoaded ? planBasic : "Loading...",
       color: "warning",
@@ -603,183 +599,186 @@ const Tenants = () => {
           </CAlert>
         ))}
       </div>
-      <CRow className="flex justify-between mr-16">
+      <CRow>
         {widgetData.map((widget, index) => (
-          <CCol key={index}>
+          <CCol key={index} style={{ fontSize: "12px" }}>
             <CWidgetStatsF
               className="mb-3 "
               color={widget.color}
-              icon={<CIcon icon={cilChartPie} height={24} color="black" />}
+              icon={
+                <CIcon
+                  className="p-0 m-0"
+                  icon={cilChartPie}
+                  height={20}
+                  color="black"
+                />
+              }
               title={widget.title}
               value={widget.value}
             />
           </CCol>
         ))}
       </CRow>
-
-      <CRow>
-        <CCol sm={7}>
-          <CButton
+      <div className="flex justify-end">
+        <CButton
+          style={{ margin: 5 }}
+          size="sm"
+          color="primary"
+          className="float-end d-flex align-items-center"
+          variant="outline"
+          onClick={() => setRefreshed(true)}
+        >
+          {refreshed || showSpinner ? (
+            <>
+              <CSpinner size="sm" className="pr-2" />
+              &nbsp;Refreshing
+            </>
+          ) : (
+            <>
+              <CIcon icon={cilReload} className="pr-2" />
+              &nbsp;Refresh
+            </>
+          )}
+        </CButton>
+        <CDropdown className="float-end">
+          <CDropdownToggle
+            href="#"
             style={{ margin: 5 }}
-            color="primary"
             size="sm"
+            color="primary"
+            className="float-end"
             variant="outline"
-            className="float-end d-flex align-items-center"
+            // disabled={selectedTenants?.length === 0 || getAccess(userRole)[0] >= 3}
           >
-            <CSVLink style={{ fontFamily: "inherit" }} data={jobList}>
-              <CIcon icon={cilCloudDownload} className="pr-2" size="lg" />
-            </CSVLink>
-          </CButton>
-          <CDropdown className="float-end">
-            <CDropdownMenu>
-              <CDropdownItem
-                href={`ssh://${localStorage.getItem("username")}@${
-                  selectedTenants?.[0]?.["Spark Server IP"]
-                }`}
-              >
-                Spark Server
-              </CDropdownItem>
-              <CDropdownItem
-                href={`ssh://${localStorage.getItem("username")}@${
-                  selectedTenants?.[0]?.["App Server IP"]
-                }`}
-              >
-                Application Server
-              </CDropdownItem>
-            </CDropdownMenu>
-          </CDropdown>
-          <CDropdown className="float-end">
-            <CDropdownToggle
-              href="#"
-              style={{ margin: 5 }}
-              size="sm"
-              color="primary"
-              className="float-end"
-              variant="outline"
-              // disabled={selectedTenants?.length === 0 || getAccess(userRole)[0] >= 3}
-            >
-              Actions
-            </CDropdownToggle>
-            <CDropdownMenu>
-              {jobsActions?.map((action) => (
-                <>
-                  {["generate-license"].includes(action.key) ? (
-                    <>
-                      {" "}
-                      <CDropdownItem
-                        disabled={selectedTenants?.length > 0}
-                        key={action.key}
-                        // onClick={() => toggleModal(action)}
-                        onClick={() =>
-                          onGenerateTenantModalOpen(action, "generate-license")
-                        }
-                      >
-                        {action.label}{" "}
-                        {action?.new ? (
-                          <CBadge color="success">new</CBadge>
-                        ) : (
-                          <></>
-                        )}
-                      </CDropdownItem>
-                    </>
-                  ) : action.key === "renew-license" ? (
-                    <>
-                      {" "}
-                      <CDropdownItem
-                        disabled={selectedTenants?.length !== 1}
-                        key={action.key}
-                        onClick={() =>
-                          onGenerateTenantModalOpen(action, "renew-license")
-                        }
-                      >
-                        {action.label}
-                      </CDropdownItem>
-                    </>
-                  ) : action.key === "disable-license" ? (
-                    <>
-                      {" "}
-                      <CDropdownItem
-                        disabled={selectedTenants?.length === 0}
-                        key={action.key}
-                        onClick={() =>
-                          onDisableModalOpen(action, "disable-license")
-                        }
-                      >
-                        {action.label}
-                      </CDropdownItem>
-                    </>
-                  ) : action.key === "enable-license" ? (
-                    <>
-                      {" "}
-                      <CDropdownItem
-                        disabled={selectedTenants?.length === 0}
-                        key={action.key}
-                        onClick={() =>
-                          onDisableModalOpen(action, "enable-license")
-                        }
-                      >
-                        {action.label}
-                      </CDropdownItem>
-                    </>
-                  ) : action.key === "refresh-license" ? (
-                    <>
-                      {" "}
-                      <CDropdownItem
-                        disabled={selectedTenants?.length !== 1}
-                        key={action.key}
-                        onClick={() =>
-                          onRefreshModalOpen(action, "refresh-license")
-                        }
-                      >
-                        {action.label}
-                      </CDropdownItem>
-                    </>
-                  ) : (
+            Actions
+          </CDropdownToggle>
+          <CDropdownMenu>
+            {jobsActions?.map((action) => (
+              <>
+                {["generate-license"].includes(action.key) ? (
+                  <>
+                    {" "}
                     <CDropdownItem
-                      disabled={selectedTenants?.length > 1}
+                      disabled={selectedTenants?.length > 0}
                       key={action.key}
-                      // onClick={() => onModalOpen(action)}
+                      // onClick={() => toggleModal(action)}
+                      onClick={() =>
+                        onGenerateTenantModalOpen(action, "generate-license")
+                      }
+                    >
+                      {action.label}{" "}
+                      {action?.new ? (
+                        <CBadge color="success">new</CBadge>
+                      ) : (
+                        <></>
+                      )}
+                    </CDropdownItem>
+                  </>
+                ) : action.key === "renew-license" ? (
+                  <>
+                    {" "}
+                    <CDropdownItem
+                      disabled={selectedTenants?.length !== 1}
+                      key={action.key}
+                      onClick={() =>
+                        onGenerateTenantModalOpen(action, "renew-license")
+                      }
                     >
                       {action.label}
                     </CDropdownItem>
-                  )}
-                </>
-              ))}
-            </CDropdownMenu>
-          </CDropdown>
-          <CButton
-            style={{ margin: 5 }}
-            size="sm"
-            color="primary"
-            className="float-end d-flex align-items-center"
-            variant="outline"
-            onClick={() => setRefreshed(true)}
-          >
-            {refreshed || showSpinner ? (
-              <>
-                <CSpinner size="sm" className="pr-2" />
-                &nbsp;Refreshing
+                  </>
+                ) : action.key === "disable-license" ? (
+                  <>
+                    {" "}
+                    <CDropdownItem
+                      disabled={selectedTenants?.length === 0}
+                      key={action.key}
+                      onClick={() =>
+                        onDisableModalOpen(action, "disable-license")
+                      }
+                    >
+                      {action.label}
+                    </CDropdownItem>
+                  </>
+                ) : action.key === "enable-license" ? (
+                  <>
+                    {" "}
+                    <CDropdownItem
+                      disabled={selectedTenants?.length === 0}
+                      key={action.key}
+                      onClick={() =>
+                        onDisableModalOpen(action, "enable-license")
+                      }
+                    >
+                      {action.label}
+                    </CDropdownItem>
+                  </>
+                ) : action.key === "refresh-license" ? (
+                  <>
+                    {" "}
+                    <CDropdownItem
+                      disabled={selectedTenants?.length !== 1}
+                      key={action.key}
+                      onClick={() =>
+                        onRefreshModalOpen(action, "refresh-license")
+                      }
+                    >
+                      {action.label}
+                    </CDropdownItem>
+                  </>
+                ) : (
+                  <CDropdownItem
+                    disabled={selectedTenants?.length > 1}
+                    key={action.key}
+                    // onClick={() => onModalOpen(action)}
+                  >
+                    {action.label}
+                  </CDropdownItem>
+                )}
               </>
-            ) : (
-              <>
-                <CIcon icon={cilReload} className="pr-2" />
-                &nbsp;Refresh
-              </>
-            )}
-          </CButton>
-        </CCol>
-      </CRow>
+            ))}
+          </CDropdownMenu>
+        </CDropdown>
+        <CButton
+          style={{ margin: 5 }}
+          color="primary"
+          size="sm"
+          variant="outline"
+        >
+          <CSVLink style={{ fontFamily: "inherit" }} data={jobList}>
+            <CIcon icon={cilCloudDownload} className="pr-2" size="lg" />
+          </CSVLink>
+        </CButton>
+        <CDropdown className="float-end">
+          <CDropdownMenu>
+            <CDropdownItem
+              href={`ssh://${localStorage.getItem("username")}@${
+                selectedTenants?.[0]?.["Spark Server IP"]
+              }`}
+            >
+              Spark Server
+            </CDropdownItem>
+            <CDropdownItem
+              href={`ssh://${localStorage.getItem("username")}@${
+                selectedTenants?.[0]?.["App Server IP"]
+              }`}
+            >
+              Application Server
+            </CDropdownItem>
+          </CDropdownMenu>
+        </CDropdown>
+      </div>
       <CRow>
-        <CContainer style={{ overflow: "auto" }}>
+        <CContainer
+          style={{ overflow: "auto", fontSize: "12px", marginBottom: "10px" }}
+        >
           <FilteredSmartTable
             key={isSubmitted}
             items={tenantList}
             noItemsLabel=""
-            columnFilter
             setSelectedItems={setSelectedTenants}
             selected={selectedTenants}
             setSelectedItemCount={setSelectedTenantCount}
-            columnSorter
             pagination
             loading={showSpinner}
             selectable

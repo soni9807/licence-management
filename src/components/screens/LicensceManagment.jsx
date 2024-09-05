@@ -5,6 +5,7 @@ import { theme } from "../../util/theme";
 import Tenants from "../../temp/license_management";
 import Tenants_licensing_audit from "../../temp/license_management_audit";
 import { TbLicense } from "react-icons/tb";
+import Footer from "../Atoms/Footer";
 
 const LicenceManagment = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -15,19 +16,19 @@ const LicenceManagment = () => {
   ];
 
   return (
-    <div className="w-full flex justify-start items-start space-x-2">
+    <div className="w-full flex justify-start items-start">
       <div
-        className={` py-4 h-screen`}
+        className={`fixed py-4 h-screen w-2/10`}
         style={{ background: theme?.colors?.surface?.primary }}
       >
-        <img src={SNYPR_LOGO} className="px-4" />
+        <img src={SNYPR_LOGO} className="px-4 h-10 " />
         <Body
           weight="bold"
           className="uppercase pt-8 px-4"
           color={theme?.colors?.text?.invertPrimary}
           body={"Licence management"}
         />
-        <div className="my-8 ">
+        <div className="my-8 w-8/10 ">
           {menuOptions?.map(({ id, label }) => (
             <div
               key={id}
@@ -44,7 +45,10 @@ const LicenceManagment = () => {
           ))}
         </div>
       </div>
-      <div>{menuOptions[activeTab]?.component}</div>
+      <div className="ml-auto" style={{ width: "85%" }}>
+        {menuOptions[activeTab]?.component}
+        <Footer />
+      </div>
     </div>
   );
 };
