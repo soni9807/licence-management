@@ -30,9 +30,13 @@ import GenerateModalAudit from "../temp/components/GenerateModalAudit";
 import DisableModal from "../temp/components/DisableModal";
 import RefreshModal from "../temp/components/RefreshModal";
 import FilteredSmartTable from "./components/FilteredSmartTable";
-import Caption from "../components/Atoms/typography/Caption";
+import { fetchTenantsData } from "../APIs/liceneseManagaement.service";
+import { useDispatch, useSelector } from "react-redux";
 
 const Tenants = () => {
+  const dispatch = useDispatch();
+  const { allTenants } = useSelector((state) => state.licence);
+  // const
   var config = require("../util/config.json");
   const [mounted, setMounted] = useState(true);
   //api states
@@ -244,6 +248,7 @@ const Tenants = () => {
 
   const MINUTE_MS = 60000;
   useEffect(() => {
+    dispatch(fetchTenantsData());
     if (mounted) {
       getLicenseInfo();
       setMounted(false);
@@ -254,7 +259,7 @@ const Tenants = () => {
         setRefreshed(false);
       }, 400);
     }
-  }, [refreshed, selectedTenants]);
+  }, [refreshed, selectedTenants, dispatch]);
 
   const jobsActions = [
     {
