@@ -44,7 +44,7 @@ const FilteredSmartTable = ({
       items={items}
       columns={columns}
       noItemsLabel=""
-      // columnFilter
+      columnFilter
       // columnSorter
       pagination
       selectable

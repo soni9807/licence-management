@@ -766,7 +766,7 @@ const GenerateModal = ({
                                 encType="application/x-www-form-urlencoded"
                                 action="/html/codes/html_form_handler.cfm"
                               >
-                                <p>
+                                <p className='mb-4'>
                                   <label title="Please enter jira ticket or comments">
                                     Jira Ticket:
                                     <input
@@ -782,7 +782,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label title="Cluster: Allowed characters are '-', alphabets and digits">
                                     Cluster:
                                     <input
@@ -797,7 +797,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label title="Tenant Id: Allowed characters are alphabets and digits">
                                     Tenant Id:
                                     <input
@@ -811,7 +811,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Tenant Name:
                                     <input
@@ -824,7 +824,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     License Start Date (UTC):
                                     <input
@@ -838,7 +838,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label title="Note: Does not include grace period">
                                     License Expiry Date (UTC):
                                     <input
@@ -853,7 +853,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Validity:
                                     <input
@@ -867,7 +867,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                {/* <p>
+                                {/* <p className='mb-4'>
                                   <label>
                                     Validity:
                                     <select
@@ -886,7 +886,7 @@ const GenerateModal = ({
                                   </label>
                                 </p> */}
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Select Grace Period:
                                     <select
@@ -906,7 +906,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label title="Licensed Users: Allowed Range is 0 - 1000000">
                                     Licensed Users
                                     <input
@@ -921,7 +921,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Licensed Resources
                                     <input
@@ -936,7 +936,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Holder
                                     <input
@@ -950,7 +950,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Expiry Action:
                                     <select
@@ -967,7 +967,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     License Type:
                                     <select
@@ -995,7 +995,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Consumer Type:
                                     <select
@@ -1012,7 +1012,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Consumer Amount:
                                     <input
@@ -1026,7 +1026,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Warn Period:
                                     <select
@@ -1045,7 +1045,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Lifecycle Status:
                                     <select
@@ -1062,7 +1062,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Issuer:
                                     <input
@@ -1076,7 +1076,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Events Per Day:
                                     <input
@@ -1091,7 +1091,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Allocated Disk Space In Gb:
                                     <input
@@ -1106,7 +1106,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Name:
                                     <input
@@ -1120,7 +1120,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Policy Allowed Count:
                                     <input
@@ -1135,7 +1135,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <div className="form-group">
                                     <label title="Cold Storage: Allowed Range is 0 - 10 years">
                                       Cold Storage:
@@ -1165,7 +1165,7 @@ const GenerateModal = ({
                                   </div>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Billing Type:
                                     <select
@@ -1183,7 +1183,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label hidden={billingType !== 'gb_per_day'}>
                                     GB Per Day:
                                     <select
@@ -1220,7 +1220,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label hidden={billingType !== '95th_%_eps'}>
                                     95th % EPS:
                                     <input
@@ -1235,7 +1235,7 @@ const GenerateModal = ({
                                   </label>
                                 </p>
 
-                                <p>
+                                <p className='mb-4'>
                                   <label>
                                     Select Plan:
                                     <select
@@ -1281,7 +1281,7 @@ const GenerateModal = ({
 
                             <div className="vertical-gap"></div>
 
-                            <table key={plan} className="custom-table" readOnly={isSubmitted}>
+                            <table key={plan} className="custom-table text-xs" readOnly={isSubmitted}>
                               <thead>
                                 <tr>
                                   <th className="custom-th">Category</th>
