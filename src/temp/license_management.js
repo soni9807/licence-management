@@ -88,7 +88,7 @@ const Tenants = () => {
   const getLicenseInfo = async (search = false, key = false) => {
     setShowSpinner(true);
     let tenant_list_api_url =
-      "http://172.20.13.59:5004/get_snypr_license_audit";
+"http://172.20.13.59:5004/get_snypr_license_audit";
 
     if (search === true) {
       tenant_list_api_url =
@@ -842,6 +842,7 @@ const Tenants = () => {
                       height: "30px",
                       display: "flex",
                       alignItems: "center",
+                      margin:"12px 0",
                       justifyContent: "center",
                     }}
                   >

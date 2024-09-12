@@ -337,15 +337,6 @@ const GenerateModal = ({
     }
   }
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch(`http://192.168.12.212:5004/get_license`)
-  //     const newData = await response.json()
-  //     setCompanyList(newData)
-  //     // console.log(newData)
-  //   }
-  //   fetchData()
-  // }, [])
 
   function setAlertMessage(response, message) {
     if (!response) {
@@ -472,18 +463,7 @@ const GenerateModal = ({
     }
   }
 
-  const onSubmit1 = async () => {
-    let version = getVersion()
-    console.log('Cluster', cluster)
-    console.log('Tenant Id', tenantid)
-    console.log('Plan', plan)
-    console.log('Selected Values:', featureValuesDict)
-    let message = ''
-    message = 'Generate license operation was successful.'
-    let response = { status: 200 }
-    setAlertMessage(response, message)
-    setIsSubmitted(true)
-  }
+  
 
   function onClose1() {
     setAlertVisible(false)

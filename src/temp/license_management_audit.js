@@ -151,7 +151,7 @@ const Tenants_licensing_audit = () => {
 
   const license_audit = async (payload) => {
     let url = 'http://172.20.13.59:5004/get_snypr_license_audit?audit="true"';
-    try {
+        try {
       const response = await fetch(url);
       const tenantlist = await response.json();
       return tenantlist;
@@ -238,24 +238,7 @@ const Tenants_licensing_audit = () => {
 
   const onGenerateModalAuditClose = () => setIsGenerateModalAuditOpen(false);
 
-  const generate_license = async (payload) => {
-    // let url = 'http://192.168.12.212:5004/generate_snypr_license'
-    let url = config.SNYPR_OMC_API + "/generate_snypr_license";
-    try {
-      const response = await fetch(url, {
-        method: "post",
-        body: JSON.stringify(payload),
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "Bearer " + localStorage.getItem("access_token"),
-        },
-      });
-      return response;
-    } catch (e) {
-      console.log(e);
-      return "";
-    }
-  };
+
 
   return (
     <CContainer fluid style={{ backgroundColor: "white", paddingTop: "1rem" }}>

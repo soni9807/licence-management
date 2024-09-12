@@ -121,28 +121,19 @@ const RefreshModal = ({
   }
 
   async function onSubmit() {
-    let payload = await create_payload()
+    let payload =  create_payload()
     console.log('PAYLOAD', payload)
     if (!jiraTicket) {
       setAlertMessage('', 'Please enter Jira Ticket')
     } else {
       setLoading(true)
-      let response = await onConfirmRefreshLicense(payload, operation)
+      await onConfirmRefreshLicense(payload, operation)
       setLoading(false)
       onClose()
     }
   }
 
-  const onSubmit1 = async () => {
-    console.log('DATA', listData)
-    const payload = await create_payload()
-    console.log('PAYLOAD', payload)
-    let message = ''
-    message = 'Generate license operation was successful.'
-    let response = { status: 200 }
-    setAlertMessage(response, message)
-    setIsSubmitted(true)
-  }
+ 
 
   function onClose1() {
     setAlertVisible(false)
@@ -176,12 +167,6 @@ const RefreshModal = ({
       <div>{loading && <div className="loading">Submitting...</div>}</div>
       <CModalHeader onClose={onClose}>
         <CModalTitle>
-          {/* <h2
-            className="alert alert-warning"
-            style={{ backgroundColor: '#1F3651', color: 'white' }}
-          >
-            Generate License for SNYPR
-          </h2> */}
         </CModalTitle>
       </CModalHeader>
       <CTabContent>
@@ -189,14 +174,10 @@ const RefreshModal = ({
           {'a' !== '' ? (
             <>
               <CModalBody style={{ maxHeight: '70vh', overflowY: 'auto' }}>
-                {/* <CModalTitle>Please fill the below details:</CModalTitle> */}
                 <CContainer style={{ paddingTop: 0, marginTop: 0 }}>
                   <CRow>
                     <CCol>
-                      <div>
-                        <div>
                           <div className="container-fluid">
-                            {/* <h2 className="alert alert-warning">Generate License</h2> */}
                             <h2
                               className="alert alert-warning"
                               style={{ backgroundColor: '#1F3651', color: 'white' }}
@@ -272,8 +253,6 @@ const RefreshModal = ({
                               </CButton>
                             </div>
                           </div>
-                        </div>
-                      </div>
                     </CCol>
                   </CRow>
                 </CContainer>

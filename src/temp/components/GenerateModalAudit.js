@@ -143,18 +143,6 @@ const GenerateModalAudit = ({
     }
   }, [rowData]);
 
-  useEffect(() => {}, []);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const response = await fetch(`http://192.168.12.212:5004/get_license`)
-  //     const newData = await response.json()
-  //     setCompanyList(newData)
-  //     // console.log(newData)
-  //   }
-  //   fetchData()
-  // }, [])
-
   function setAlertMessage(response, message) {
     if (!response) {
       setAlertProps({
@@ -178,46 +166,6 @@ const GenerateModalAudit = ({
     }
     setAlertVisible(true);
   }
-
-  // async function onSubmit() {
-  //   const timestamp = Date.now()
-  //   let payload = {
-  //     app_key: 'b0l2ndgk_8EhVZB57aTPfj83NP9YTVP8yBH4AkxSg',
-  //     useremail: localStorage.getItem('email'),
-  //     operation: title,
-  //     cluster: cluster,
-  //     tenant_id: tenantid,
-  //     jira_ticket: jiraTicket,
-  //   }
-  //   console.log('PAYLOAD', payload)
-
-  //   let response = await onConfirmGenerateLicense(payload)
-  //   console.log('RESPONSEEEE')
-  //   console.log(response.json())
-  //   let message = ''
-  //   if (response) {
-  //     if (response.status === 200) {
-  //       setIsSubmitted(true)
-  //       message = 'License Details Approved.'
-  //     } else {
-  //       message = 'Operation failed.'
-  //     }
-  //   } else {
-  //     message = 'Error while approving license details'
-  //   }
-  //   setAlertMessage(response, message)
-  //   sessionStorage.clear()
-  // }
-
-  // const handleOnApprove = () => {
-  //   const isConfirmed = window.confirm('Are you sure you want to Approve?')
-
-  //   if (isConfirmed) {
-  //     onSubmit()
-  //   } else {
-  //     alert('Approval cancelled.')
-  //   }
-  // }
 
   function onClose1() {
     onClose("");
