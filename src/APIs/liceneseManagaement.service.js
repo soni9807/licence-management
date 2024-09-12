@@ -11,3 +11,9 @@ export const fetchTenantsData = () => async (dispatch) => {
     console.error("Error fetching tenants:", err);
   }
 };
+
+export const generateNewLicence = async (payload) => {
+  const url = BASE_URL + "/generate-new-licence";
+  const response = await axios.post(url,payload);
+  return response?.data;
+};
