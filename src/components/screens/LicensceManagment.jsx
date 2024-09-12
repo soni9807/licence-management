@@ -36,7 +36,7 @@ const LicenceManagment = () => {
         <img src={SNYPR_LOGO} alt="SNYPR Logo" className="px-4 h-15 my-4" />
         <Body
           weight="bold"
-          className="uppercase pt-8 px-4"
+          className="uppercase pt-8 px-4 border-bottom pb-2"
           color={theme?.colors?.text?.invertPrimary}
           body="Licence management"
         />
@@ -45,7 +45,7 @@ const LicenceManagment = () => {
             <div
               key={id}
               className={`flex items-center space-x-2 cursor-pointer p-4 ${
-                activeTab === id ? "bg-gradient-to-r from-violet-800 to-fuchsia-700" : ""
+                activeTab === id ? "bg-gradient-to-r from-violet-900 to-fuchsia-900" : ""
               }`}
               onClick={() => setActiveTab(id)}
             >
@@ -56,7 +56,7 @@ const LicenceManagment = () => {
         </nav>
         <Body
           weight="bold"
-          className="uppercase pt-8 px-4 mb-4"
+          className="uppercase pt-8 px-4 mb-4 border-bottom pb-2"
           color={theme?.colors?.text?.invertPrimary}
           body="Settings"
         />
@@ -95,13 +95,12 @@ const LicenceManagment = () => {
             <Body body="Close" color={theme?.colors?.text?.invertPrimary} />
           </div>
         ) : (
-          <div className="flex items-center space-x-2 border-2 border-blue-500 rounded-md px-2 py-1"
-          style={{ background: theme?.colors?.surface?.secondary}}>
+          <div className="flex items-center space-x-2  rounded-md px-4 py-2 bg-gradient-to-r from-violet-900 to-fuchsia-900">
             <LuPanelLeftOpen
-              color={!isPanelOpen ? theme?.colors?.surface?.primary : "white"}
               size="24"
+              color={theme?.colors?.text?.invertPrimary}
             />
-            <Body body="Open" color={theme?.colors?.text?.primary} />
+            <Body body="Open" color={theme?.colors?.text?.invertPrimary} />
           </div>
         )}
       </button>
